@@ -175,6 +175,9 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.1 }}
             >
               <Card className="text-center">
+                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-green-50 mx-auto mb-4">
+                  <Users className="w-8 h-8 text-[#01411C]" />
+                </div>
                 <Counter end={100000} duration={2.5} suffix="+" />
                 <div className="text-gray-600">Registered Volunteers</div>
               </Card>
@@ -186,6 +189,9 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <Card className="text-center">
+                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-purple-50 mx-auto mb-4">
+                  <Map className="w-8 h-8 text-purple-600" />
+                </div>
                 <Counter end={159} duration={2} />
                 <div className="text-gray-600">Districts Covered</div>
               </Card>
@@ -197,6 +203,9 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <Card className="text-center">
+                <div className="flex items-center justify-center w-16 h-16 rounded-full bg-red-50 mx-auto mb-4">
+                  <ShieldCheck className="w-8 h-8 text-red-600" />
+                </div>
                 <Counter end={24} duration={1.5} suffix="/7" />
                 <div className="text-gray-600">Emergency Response</div>
               </Card>
