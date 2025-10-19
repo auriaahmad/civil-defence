@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Pakistan Brand Colors */
+  --pakistan-green: #01411C;
+  --pakistan-green-light: #0a6b33;
+  --pakistan-green-lighter: #e8f5ed;
+  --white: #FFFFFF;
+  --alert-red: #DC2626;
+  --success-green: #059669;
+  --info-blue: #2563EB;
+
+  /* Gradient Colors */
+  --gradient-start: #01411C;
+  --gradient-middle: #0a6b33;
+  --gradient-end: #16a34a;
+
+  /* Additional UI Colors */
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--pakistan-green);
+  --color-secondary: var(--white);
+  --color-alert: var(--alert-red);
+  --color-success: var(--success-green);
+  --color-info: var(--info-blue);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Custom colors for Tailwind */
+  --color-pakistan-green: var(--pakistan-green);
+  --color-alert-red: var(--alert-red);
+  --color-success-green: var(--success-green);
+  --color-info-blue: var(--info-blue);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Modern Gradient Backgrounds */
+.gradient-hero {
+  background: linear-gradient(135deg, #01411C 0%, #0a6b33 50%, #16a34a 100%);
+}
+
+.gradient-card {
+  background: linear-gradient(135deg, #ffffff 0%, #fafafa 100%);
+}
+
+.gradient-subtle {
+  background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+}
+
+/* Custom Utility Classes */
+.btn-primary {
+  background-color: var(--pakistan-green);
+  color: white;
+  padding: 0.625rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #025a28;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: var(--pakistan-green);
+  padding: 0.625rem 1.5rem;
+  border: 2px solid var(--pakistan-green);
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: var(--gray-50);
+}
+
+.btn-alert {
+  background-color: var(--alert-red);
+  color: white;
+  padding: 0.625rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-alert:hover {
+  background-color: #b91c1c;
+}
+
+/* Typing Animation Keyframes */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+/* Cursor Blink Animation */
+.animate-blink {
+  animation: blink 0.75s step-end infinite;
+}
+
+/* Remove blinking after typing is complete */
+@keyframes stop-blink {
+  to {
+    border-color: transparent;
+  }
+}

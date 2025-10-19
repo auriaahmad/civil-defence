@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//d/MyGitHub/civil-defence/**)",
+      "Bash(npm run dev)",
+      "Bash(timeout /t 10)",
+      "Bash(ping localhost -n 6)",
+      "Bash(dir /b \"D:\\MyGitHub\\civil-defence\\frontend\\public\")",
+      "Bash(npm install framer-motion)",
+      "Bash(npm run build)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
